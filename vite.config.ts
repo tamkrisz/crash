@@ -13,6 +13,7 @@ const crossOriginIsolation = {
 };
 
 export default defineConfig({
+  plugins: [],
   server: { headers: crossOriginIsolation },
   preview: { headers: crossOriginIsolation },
   worker: { format: "es" },
