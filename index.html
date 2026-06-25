@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRASH</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="frame">
+        <header id="titlebar">
+          <span class="logo">C R A S H</span>
+          <span class="sub">DIGITAL NIGHTMARES &middot; 1996 &middot; web remake</span>
+        </header>
+
+        <div id="stage">
+          <canvas id="arena"></canvas>
+
+          <!-- live leaderboard (top-right) -->
+          <div id="leaderboard" class="hidden">
+            <h3>LEADERBOARD</h3>
+            <div id="lbAlive"></div>
+            <ol id="lbRows"></ol>
+          </div>
+
+          <!-- Menu overlay -->
+          <div id="menu" class="overlay">
+            <h1>CRASH</h1>
+            <p class="tagline">United Planet Federation Crash Races &mdash; A.D. 2234</p>
+            <p class="blurb">Stay alive. Avoid the walls, your trail, and theirs.<br />Last cycle running wins.</p>
+
+            <div class="field">
+              <label>MODE</label>
+              <div class="seg" data-group="mode">
+                <button data-value="classic" class="active">CLASSIC</button>
+                <button data-value="mega" title="8× arena split into 4 quadrant zones linked by tunnels — 64 cycles, 16 per zone">MEGA &middot; 64</button>
+                <button data-value="giga" title="4× the mega arena (32× base) — 128 cycles, 32 per zone, thick outer frame">GIGA &middot; 128</button>
+                <button data-value="tera" title="4× the giga arena (128× base) — 512 cycles, 128 per zone, massive outer frame">TERA &middot; 512</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>HUMAN PILOTS</label>
+              <div class="seg" data-group="humans">
+                <button data-value="1" class="active">1</button>
+                <button data-value="2">2</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>A.I. RIVALS</label>
+              <div class="seg" data-group="ai">
+                <button data-value="0">0</button>
+                <button data-value="1">1</button>
+                <button data-value="3" class="active">3</button>
+                <button data-value="5">5</button>
+                <button data-value="8">8</button>
+                <button data-value="16" data-total="16" title="Fill the grid to 16 cycles total">16</button>
+                <button data-value="32" data-total="32" title="Fill the grid to 32 cycles total">32</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>A.I. SKILL</label>
+              <div class="seg" data-group="difficulty">
+                <button data-value="easy">EASY</button>
+                <button data-value="hard">HARD</button>
+                <button data-value="cheating" class="active" title="Unfair: relentless sprint, blasts out of any pocket, looks ahead forever — close to impossible to kill">CHEATING</button>
+                <button data-value="evolved" title="Machine-bred (see train/): a GA-evolved profile that learned to survive a field of cheating hunters — fast, evasive, never attacks, outlasts everyone">EVOLVED</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>A.I. CHARACTER</label>
+              <div class="seg seg-wrap" data-group="character">
+                <button data-value="balanced" class="active" title="All-rounder — the standard skill profile, no special leanings">BALANCED</button>
+                <button data-value="hunter" title="Killer — lives only to track down rivals across the arena and gun them down">HUNTER</button>
+                <button data-value="hunterplus" title="Trained killer — a GA-evolved hunter bred in 128-cycle giga matches to rack up the most kills (out-kills a stock hunter ~64%)">HUNTER+</button>
+                <button data-value="packer" title="Tightest fit — hugs walls and its own trail to pack the most compact coil">PACKER</button>
+                <button data-value="runner" title="Speed-demon — laser-straight long runs at full sprint, turns only when forced">RUNNER</button>
+                <button data-value="survivor" title="Pacifist — never attacks, hoards open space, only blasts an exit when truly cornered">SURVIVOR</button>
+                <button data-value="turtle" title="Ultimate survivalist — never fights, actively flees every rival, looks far ahead and re-plans every step to outlast the whole field">TURTLE</button>
+                <button data-value="demolisher" title="Wall-breaker — blasts walls open constantly, sprints, and fights with abandon">DEMOLISH</button>
+                <button data-value="roamer" title="Explorer — ranges wide across open arena claiming fresh territory">ROAMER</button>
+                <button data-value="ambusher" title="Stalker — shadows the nearest rival then cuts across its path to force a crash">AMBUSH</button>
+                <button data-value="random" title="Random mix — each rival rolls a random character; rival count comes from the A.I. RIVALS picker">RANDOM</button>
+                <button data-value="custom" id="customRosterBtn" title="Mix characters — pick how many of each, or a random blend">MIX&hellip;</button>
+              </div>
+              <div class="seg-note" id="rosterSummary"></div>
+            </div>
+
+            <div class="field">
+              <label>SPEED</label>
+              <div class="seg" data-group="speed">
+                <button data-value="slow">SLOW</button>
+                <button data-value="normal">NORMAL</button>
+                <button data-value="fast" class="active">FAST</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>ARENA</label>
+              <div class="seg" data-group="map">
+                <button data-value="cross" class="active">CROSS</button>
+                <button data-value="boxes">BOXES</button>
+                <button data-value="ring">RING</button>
+                <button data-value="diamond">DIAMOND</button>
+                <button data-value="random" title="Procedurally generated — random obstacles every round">RANDOM</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>ARENA SIZE</label>
+              <div class="seg" data-group="size">
+                <button data-value="small" class="active" title="160 × 110 — the classic arena">SMALL</button>
+                <button data-value="medium" title="220 × 150 — more room to run">MEDIUM</button>
+                <button data-value="large" title="300 × 200 — a sprawling battlefield">LARGE</button>
+              </div>
+            </div>
+
+            <button id="startBtn" class="big">START RACE</button>
+
+            <div class="controls">
+              <div id="p1Controls">
+                <b>P1 (CYAN)</b> &mdash; Arrows &middot; sprint: Left Shift &middot;
+                rocket: <kbd>Space</kbd>
+              </div>
+              <div id="p2Controls">
+                <b>P2 (YELLOW)</b> &mdash; W A S D &middot; sprint: Left Shift &middot;
+                rocket: <kbd>Space</kbd>
+              </div>
+              <div class="dim">
+                Rockets fly until impact &mdash; even off-screen &mdash; then blow a
+                4&times;4 hole through trails, pillars &amp; rivals. Recharges over time.
+              </div>
+            </div>
+          </div>
+
+          <!-- Game-over overlay -->
+          <div id="roundover" class="overlay hidden">
+            <h2 id="resultText">GAME OVER</h2>
+            <p id="resultSub" class="tagline">&mdash;</p>
+            <table id="scoreboard"></table>
+            <div class="hint">SPACE / ENTER &mdash; race again &nbsp;&middot;&nbsp; ESC &mdash; menu</div>
+            <div class="touch-only roundover-actions">
+              <button id="againBtn" class="big">RACE AGAIN</button>
+              <button id="menuBtn">MENU</button>
+            </div>
+          </div>
+
+          <!-- A.I. roster builder (opened from the MIX… character button) -->
+          <div id="rosterModal" class="overlay hidden">
+            <h2>A.I. ROSTER</h2>
+            <p class="tagline">Build the field of rival characters</p>
+
+            <div class="field roster-field">
+              <label>METHOD</label>
+              <div class="seg" data-group="rosterMode">
+                <button data-value="counts" class="active" title="Set exactly how many of each character race">PICK COUNTS</button>
+                <button data-value="random" title="Pick a total and let each rival roll a random character">RANDOM MIX</button>
+              </div>
+            </div>
+
+            <!-- PICK COUNTS: a stepper per character; the sum is the rival total -->
+            <div id="rosterCounts" class="roster-section">
+              <div id="rosterRows" class="roster-rows"></div>
+              <div class="roster-foot">
+                <div class="roster-total">RIVALS: <span id="rosterTotal">0</span></div>
+                <div class="roster-quick">
+                  <button id="rosterPlusEach" title="Add one of every character (click again for 2 each, etc.)">+1 EACH</button>
+                  <button id="rosterClear" title="Reset all counts to zero">CLEAR</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- RANDOM MIX: a rival total plus the pool of characters to draw from -->
+            <div id="rosterRandom" class="roster-section hidden">
+              <div class="field roster-field">
+                <label>RIVALS</label>
+                <div class="stepper" id="randomTotalStepper">
+                  <button data-step="-1">&minus;</button>
+                  <span id="randomTotal">6</span>
+                  <button data-step="1">+</button>
+                </div>
+              </div>
+              <p class="roster-pool-label">Draw random characters from:</p>
+              <div id="randomPool" class="roster-pool"></div>
+            </div>
+
+            <div class="roster-actions">
+              <button id="rosterDone" class="big">DONE</button>
+              <button id="rosterCancel">CANCEL</button>
+            </div>
+          </div>
+
+          <!-- On-screen touch controls (mobile / touch devices only).
+               Tap the left half of the arena to turn left, the right half to
+               turn right — relative to your heading, so quick chained turns
+               work with either thumb. FIRE / SPRINT sit on top in the lower
+               corners. -->
+          <div id="touch" class="hidden">
+            <div class="turn-zone turn-left" data-turn="-1">
+              <span>&#8634;<br />LEFT</span>
+            </div>
+            <div class="turn-zone turn-right" data-turn="1">
+              <span>&#8635;<br />RIGHT</span>
+            </div>
+            <button id="tMenu" class="t-menu" aria-label="Menu">&#9776;</button>
+            <button id="tRocket" class="t-act t-rocket">FIRE</button>
+            <button id="tSprint" class="t-act t-sprint">SPRINT</button>
+          </div>
+        </div>
+
+        <footer id="hud">
+          <span id="hudStatus">READY</span>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

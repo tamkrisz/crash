@@ -1,0 +1,20 @@
+{
+  "aimRange": 1384,
+  "aimTake": 0.9896367683412647,
+  "lead": true,
+  "escape": true,
+  "escapeSpace": 1500,
+  "openRate": 0,
+  "flood": 2616,
+  "open": 2.4282078575544515,
+  "hunt": 57.667760732035035,
+  "straight": 0.8051322842967654,
+  "jitter": 0.834925103307764,
+  "alwaysSprint": true,
+  "stalk": false,
+  "breach": false,
+  "pathfind": true,
+  "dodge": true,
+  "seekRange": 90570,
+  "pacifist": false
+}

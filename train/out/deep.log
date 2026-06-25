@@ -1,0 +1,36 @@
+Route A — evolving an AiProfile (parallel + successive halving)
+  pop=32 gens=18 matches/finalist=14 field=4 workers=8
+  arena=small/cross reference=cheating
+  rungs=4m→keep13, 4m→keep6, 6m→keep5
+
+baseline (reference) profile: {"aimRange":1798,"aimTake":1,"lead":true,"escape":true,"escapeSpace":1560,"openRate":0.06,"flood":2500,"open":3.12,"hunt":90,"straight":2.4000000000000004,"jitter":0,"alwaysSprint":true,"stalk":true,"breach":true,"pathfind":true,"dodge":true,"seekRange":100000} 
+
+gen  0  best=2.000 (wins 14/14)  mean=0.642  ref=0.456 (wins 1/14)  [230 matches, 22s]
+gen  1  best=1.905 (wins 13/14)  mean=0.864  ref=0.694 (wins 3/14)  [460 matches, 46s]
+gen  2  best=1.677 (wins 11/14)  mean=0.949  ref=0.626 (wins 2/14)  [690 matches, 69s]
+gen  3  best=1.690 (wins 11/14)  mean=0.919  ref=0.765 (wins 4/14)  [920 matches, 91s]
+gen  4  best=1.721 (wins 11/14)  mean=1.163  ref=1.007 (wins 6/14)  [1150 matches, 114s]
+gen  5  best=1.810 (wins 12/14)  mean=1.070  ref=0.551 (wins 2/14)  [1380 matches, 138s]
+gen  6  best=1.810 (wins 12/14)  mean=1.223  ref=0.470 (wins 2/14)  [1610 matches, 162s]
+gen  7  best=1.786 (wins 12/14)  mean=1.175  ref=0.670 (wins 3/14)  [1840 matches, 186s]
+gen  8  best=2.000 (wins 14/14)  mean=1.229  ref=0.718 (wins 3/14)  [2070 matches, 210s]
+gen  9  best=1.745 (wins 12/14)  mean=1.173  ref=0.895 (wins 5/14)  [2300 matches, 237s]
+gen 10  best=1.796 (wins 12/14)  mean=1.130  ref=1.004 (wins 6/14)  [2530 matches, 261s]
+gen 11  best=1.905 (wins 13/14)  mean=1.377  ref=0.524 (wins 2/14)  [2760 matches, 280s]
+gen 12  best=2.004 (wins 14/14)  mean=1.350  ref=0.714 (wins 3/14)  [2990 matches, 300s]
+gen 13  best=1.908 (wins 13/14)  mean=1.171  ref=0.820 (wins 4/14)  [3220 matches, 320s]
+gen 14  best=1.810 (wins 12/14)  mean=1.309  ref=0.677 (wins 3/14)  [3450 matches, 341s]
+gen 15  best=1.813 (wins 12/14)  mean=1.366  ref=0.408 (wins 1/14)  [3680 matches, 365s]
+gen 16  best=1.670 (wins 11/14)  mean=1.156  ref=0.575 (wins 2/14)  [3910 matches, 387s]
+gen 17  best=1.810 (wins 12/14)  mean=1.128  ref=0.868 (wins 4/14)  [4140 matches, 406s]
+
+==== validation (60 unseen matches vs the stock field) ====
+evolved : avg=1.585  wins=43/60  (72%)
+baseline: avg=0.677  wins=12/60  (20%)
+
+(A lone bot among 4 equal players wins ~25% by chance.)
+total matches simulated: 4260 in 415.9s
+
+wrote train/out/best-profile.json
+wrote train/out/evolve-log.csv
+best genome: {"aimRange":2042,"aimTake":1,"lead":true,"escape":true,"escapeSpace":1526,"openRate":0.029915287717782256,"flood":1684,"open":2.2877740909864253,"hunt":103.03887879040276,"straight":4.682015965347096,"jitter":0,"alwaysSprint":true,"stalk":true,"breach":false,"pathfind":false,"dodge":true,"seekRange":100318,"pacifist":true}

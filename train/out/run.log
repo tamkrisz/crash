@@ -1,0 +1,34 @@
+Route A — evolving an AiProfile
+  pop=30 gens=18 matches/cand=16 field=6 arena=medium/cross reference=hard
+
+baseline (reference) profile: {"aimRange":24,"aimTake":0.92,"lead":true,"escape":true,"escapeSpace":120,"openRate":0.1,"flood":240,"open":0.7,"hunt":6,"straight":6,"jitter":3} 
+
+gen  0  best=1.603 (wins 11/16)  mean=0.644  ref=0.762 (wins 4/16)
+gen  1  best=1.456 (wins 9/16)  mean=0.786  ref=0.581 (wins 2/16)
+gen  2  best=1.544 (wins 11/16)  mean=0.865  ref=0.544 (wins 2/16)
+gen  3  best=1.738 (wins 13/16)  mean=1.105  ref=0.703 (wins 4/16)
+gen  4  best=1.709 (wins 12/16)  mean=1.189  ref=0.506 (wins 1/16)
+gen  5  best=1.653 (wins 12/16)  mean=1.163  ref=0.609 (wins 3/16)
+gen  6  best=1.863 (wins 14/16)  mean=1.174  ref=0.459 (wins 1/16)
+gen  7  best=1.694 (wins 12/16)  mean=1.122  ref=0.637 (wins 2/16)
+gen  8  best=1.759 (wins 13/16)  mean=1.276  ref=0.622 (wins 3/16)
+gen  9  best=1.853 (wins 14/16)  mean=1.246  ref=0.531 (wins 1/16)
+gen 10  best=1.766 (wins 13/16)  mean=1.246  ref=0.653 (wins 3/16)
+gen 11  best=1.866 (wins 14/16)  mean=1.264  ref=0.463 (wins 1/16)
+gen 12  best=1.700 (wins 12/16)  mean=1.305  ref=0.537 (wins 1/16)
+gen 13  best=1.550 (wins 11/16)  mean=1.212  ref=0.669 (wins 3/16)
+gen 14  best=1.838 (wins 14/16)  mean=1.219  ref=0.625 (wins 3/16)
+gen 15  best=1.669 (wins 12/16)  mean=1.202  ref=0.406 (wins 0/16)
+gen 16  best=1.675 (wins 12/16)  mean=1.174  ref=0.581 (wins 2/16)
+gen 17  best=1.628 (wins 11/16)  mean=1.206  ref=0.538 (wins 2/16)
+
+==== validation (60 unseen matches, evolved vs the field it trained against) ====
+evolved : fit=1.516  wins=37/60  (62%)
+baseline: fit=0.637  wins=10/60  (17%)
+
+(A lone bot among 6 equal players wins ~17% by chance.)
+
+wrote train/out/best-profile.json
+wrote train/out/evolve-log.csv
+
+best genome: {"aimRange":8,"aimTake":0.898028537022811,"lead":true,"escape":true,"escapeSpace":158,"openRate":0,"flood":280,"open":-1.3188645447678846,"hunt":2.7361331845424273,"straight":4.659675422399951,"jitter":1.305371137597617,"seekRange":15,"alwaysSprint":false,"stalk":false,"breach":false,"pathfind":false,"dodge":true}

@@ -1,0 +1,63 @@
+Self-play co-evolution
+  pop=30 gens=50 matches/finalist=14 field=4 workers=8 arena=small hof<=10
+  seed model (from train/out/best-profile.json): {"aimRange":2042,"aimTake":1,"lead":true,"escape":true,"escapeSpace":1526,"openRate":0.029915287717782256,"flood":1684,"open":2.2877740909864253,"hunt":103.03887879040276,"straight":4.682015965347096,"jitter":0,"alwaysSprint":true,"stalk":true,"breach":false,"pathfind":false,"dodge":true,"seekRange":100318,"pacifist":true}
+
+gen  0  best=1.218 (wins 7/14)  mean=0.628  hof=1  [204 matches, 8s]
+gen  1  best=1.480 (wins 7/14)  mean=0.721  hof=2  [408 matches, 18s]
+gen  2  best=1.302 (wins 7/14)  mean=0.706  hof=3  [612 matches, 32s]
+gen  3  best=1.637 (wins 10/14)  mean=0.671  hof=4  [816 matches, 45s]
+gen  4  best=1.474 (wins 8/14)  mean=0.818  hof=5  [1020 matches, 60s]
+gen  5  best=1.467 (wins 7/14)  mean=0.734  hof=6  [1224 matches, 71s]
+gen  6  best=1.337 (wins 6/14)  mean=0.761  hof=7  [1428 matches, 84s]
+gen  7  best=1.477 (wins 8/14)  mean=0.820  hof=8  [1632 matches, 94s]
+gen  8  best=1.039 (wins 5/14)  mean=0.651  hof=9  [1836 matches, 105s]
+gen  9  best=1.436 (wins 8/14)  mean=0.757  hof=10  [2040 matches, 114s]
+gen 10  best=1.239 (wins 7/14)  mean=0.561  hof=10  [2244 matches, 123s]
+gen 11  best=0.984 (wins 5/14)  mean=0.529  hof=10  [2448 matches, 134s]
+gen 12  best=1.415 (wins 8/14)  mean=0.760  hof=10  [2652 matches, 141s]
+gen 13  best=1.171 (wins 5/14)  mean=0.857  hof=10  [2856 matches, 148s]
+gen 14  best=1.089 (wins 6/14)  mean=0.627  hof=10  [3060 matches, 156s]
+gen 15  best=1.273 (wins 6/14)  mean=0.743  hof=10  [3264 matches, 162s]
+gen 16  best=1.264 (wins 6/14)  mean=0.739  hof=10  [3468 matches, 170s]
+gen 17  best=1.317 (wins 7/14)  mean=0.739  hof=10  [3672 matches, 177s]
+gen 18  best=1.166 (wins 5/14)  mean=0.676  hof=10  [3876 matches, 184s]
+gen 19  best=1.257 (wins 6/14)  mean=0.616  hof=10  [4080 matches, 192s]
+gen 20  best=1.027 (wins 5/14)  mean=0.444  hof=10  [4284 matches, 200s]
+gen 21  best=1.318 (wins 8/14)  mean=0.858  hof=10  [4488 matches, 207s]
+gen 22  best=1.190 (wins 7/14)  mean=0.641  hof=10  [4692 matches, 213s]
+gen 23  best=1.090 (wins 5/14)  mean=0.713  hof=10  [4896 matches, 221s]
+gen 24  best=1.552 (wins 9/14)  mean=0.776  hof=10  [5100 matches, 227s]
+gen 25  best=1.180 (wins 5/14)  mean=0.742  hof=10  [5304 matches, 241s]
+gen 26  best=1.310 (wins 6/14)  mean=0.838  hof=10  [5508 matches, 250s]
+gen 27  best=1.301 (wins 8/14)  mean=0.646  hof=10  [5712 matches, 257s]
+gen 28  best=0.934 (wins 5/14)  mean=0.588  hof=10  [5916 matches, 268s]
+gen 29  best=1.375 (wins 8/14)  mean=0.730  hof=10  [6120 matches, 279s]
+gen 30  best=1.264 (wins 6/14)  mean=0.648  hof=10  [6324 matches, 292s]
+gen 31  best=0.894 (wins 5/14)  mean=0.408  hof=10  [6528 matches, 300s]
+gen 32  best=1.138 (wins 6/14)  mean=0.692  hof=10  [6732 matches, 309s]
+gen 33  best=1.316 (wins 8/14)  mean=0.885  hof=10  [6936 matches, 322s]
+gen 34  best=1.159 (wins 6/14)  mean=0.648  hof=10  [7140 matches, 330s]
+gen 35  best=1.217 (wins 6/14)  mean=0.559  hof=10  [7344 matches, 339s]
+gen 36  best=1.415 (wins 7/14)  mean=0.596  hof=10  [7548 matches, 350s]
+gen 37  best=0.914 (wins 5/14)  mean=0.416  hof=10  [7752 matches, 359s]
+gen 38  best=1.448 (wins 8/14)  mean=0.981  hof=10  [7956 matches, 371s]
+gen 39  best=1.206 (wins 7/14)  mean=0.744  hof=10  [8160 matches, 382s]
+gen 40  best=1.268 (wins 6/14)  mean=0.841  hof=10  [8364 matches, 395s]
+gen 41  best=1.460 (wins 7/14)  mean=0.852  hof=10  [8568 matches, 408s]
+gen 42  best=1.209 (wins 7/14)  mean=0.817  hof=10  [8772 matches, 424s]
+gen 43  best=1.745 (wins 10/14)  mean=0.742  hof=10  [8976 matches, 442s]
+gen 44  best=1.026 (wins 6/14)  mean=0.592  hof=10  [9180 matches, 455s]
+gen 45  best=1.082 (wins 5/14)  mean=0.618  hof=10  [9384 matches, 467s]
+gen 46  best=1.391 (wins 7/14)  mean=0.600  hof=10  [9588 matches, 482s]
+gen 47  best=1.283 (wins 7/14)  mean=0.582  hof=10  [9792 matches, 494s]
+gen 48  best=1.119 (wins 5/14)  mean=0.541  hof=10  [9996 matches, 505s]
+gen 49  best=1.353 (wins 6/14)  mean=0.788  hof=10  [10200 matches, 513s]
+
+==== self-play champion vs a field of the original deep model (80 matches) ====
+champion : wins=12/80 (15%)  avg=0.499
+deep model (for reference, vs same field): wins=20/80 (25%)
+(chance among 4 equals = 25%)
+total matches simulated: 10360 in 518.2s
+
+wrote train/out/selfplay-best.json
+champion: {"aimRange":861,"aimTake":0.944411555279619,"lead":true,"escape":true,"escapeSpace":360,"openRate":0.0614201603351712,"flood":1245,"open":-0.32935941343289776,"hunt":66.66789351866424,"straight":4.62827858482112,"jitter":0,"alwaysSprint":true,"stalk":false,"breach":false,"pathfind":false,"dodge":true,"seekRange":83239,"pacifist":false}

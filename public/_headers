@@ -1,0 +1,7 @@
+# Cross-origin isolation so SharedArrayBuffer is available in production (enables
+# the multi-threaded AI). Netlify / Cloudflare Pages read this file verbatim; for
+# other hosts replicate these two headers on the HTML document response. Without
+# them the game falls back to single-threaded AI (still fully playable).
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp

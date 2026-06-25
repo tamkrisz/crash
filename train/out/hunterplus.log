@@ -1,0 +1,45 @@
+Hunter+ — evolving a GIGA killer (fitness = kills)
+  pop=32 gens=30 matches/gen=10 slots=128 workers=8 stepCap=4500
+  seed = cheating HUNTER: {"aimRange":1798,"aimTake":1,"lead":true,"escape":true,"escapeSpace":1560,"openRate":0.06,"flood":2500,"open":3.12,"hunt":90,"straight":2.4000000000000004,"jitter":0,"alwaysSprint":true,"stalk":true,"breach":true,"pathfind":true,"dodge":true,"seekRange":100000}
+  prey = hard balanced/packer/runner/roamer/ambusher
+
+stock cheating-hunter baseline: 0.46 kills/match
+
+gen  0  best=1.26 kills  mean=0.75  stockHunter=0.46  [20 matches, 36s]
+gen  1  best=1.67 kills  mean=0.76  stockHunter=0.46  [30 matches, 63s]
+gen  2  best=1.86 kills  mean=0.79  stockHunter=0.46  [40 matches, 97s]
+gen  3  best=1.46 kills  mean=0.91  stockHunter=0.46  [50 matches, 137s]
+gen  4  best=1.36 kills  mean=0.84  stockHunter=0.46  [60 matches, 183s]
+gen  5  best=1.57 kills  mean=0.85  stockHunter=0.46  [70 matches, 244s]
+gen  6  best=1.76 kills  mean=0.89  stockHunter=0.46  [80 matches, 284s]
+gen  7  best=1.57 kills  mean=0.92  stockHunter=0.46  [90 matches, 320s]
+gen  8  best=1.47 kills  mean=0.92  stockHunter=0.46  [100 matches, 365s]
+gen  9  best=1.36 kills  mean=0.79  stockHunter=0.46  [110 matches, 405s]
+gen 10  best=1.78 kills  mean=0.91  stockHunter=0.46  [120 matches, 452s]
+gen 11  best=1.45 kills  mean=0.91  stockHunter=0.46  [130 matches, 497s]
+gen 12  best=1.76 kills  mean=0.87  stockHunter=0.46  [140 matches, 546s]
+gen 13  best=1.76 kills  mean=0.99  stockHunter=0.46  [150 matches, 600s]
+gen 14  best=1.77 kills  mean=1.00  stockHunter=0.46  [160 matches, 644s]
+gen 15  best=1.75 kills  mean=0.93  stockHunter=0.46  [170 matches, 695s]
+gen 16  best=1.55 kills  mean=0.90  stockHunter=0.46  [180 matches, 736s]
+gen 17  best=1.77 kills  mean=0.95  stockHunter=0.46  [190 matches, 774s]
+gen 18  best=1.46 kills  mean=0.88  stockHunter=0.46  [200 matches, 812s]
+gen 19  best=1.57 kills  mean=0.89  stockHunter=0.46  [210 matches, 864s]
+gen 20  best=1.97 kills  mean=0.99  stockHunter=0.46  [220 matches, 914s]
+gen 21  best=2.17 kills  mean=0.88  stockHunter=0.46  [230 matches, 956s]
+gen 22  best=1.46 kills  mean=0.89  stockHunter=0.46  [240 matches, 987s]
+gen 23  best=1.76 kills  mean=0.98  stockHunter=0.46  [250 matches, 1020s]
+gen 24  best=1.55 kills  mean=0.90  stockHunter=0.46  [260 matches, 1067s]
+gen 25  best=1.67 kills  mean=0.98  stockHunter=0.46  [270 matches, 1105s]
+gen 26  best=1.76 kills  mean=0.96  stockHunter=0.46  [280 matches, 1158s]
+gen 27  best=2.08 kills  mean=0.94  stockHunter=0.46  [290 matches, 1198s]
+gen 28  best=1.86 kills  mean=0.89  stockHunter=0.46  [300 matches, 1239s]
+gen 29  best=2.07 kills  mean=0.96  stockHunter=0.46  [310 matches, 1274s]
+
+==== Hunter+ final (avg kills/match in giga, 10 unseen matches) ====
+Hunter+ champion : 0.75 kills/match
+stock cheating hunter: 1.15 kills/match
+total matches simulated: 330 in 1299.7s
+
+wrote train/out/hunterplus-best.json
+champion: {"aimRange":1384,"aimTake":0.9896367683412647,"lead":true,"escape":true,"escapeSpace":1500,"openRate":0,"flood":2616,"open":2.4282078575544515,"hunt":57.667760732035035,"straight":0.8051322842967654,"jitter":0.834925103307764,"alwaysSprint":true,"stalk":false,"breach":false,"pathfind":true,"dodge":true,"seekRange":90570,"pacifist":false}

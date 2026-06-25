@@ -1,0 +1,16 @@
+{
+  "name": "crash",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A web recreation of the 1996 DOS game CRASH (Tron light-cycles) by Digital Nightmares.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^5.4.8"
+  }
+}
